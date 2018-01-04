@@ -8,10 +8,10 @@
 // }
 
 // jQurey를 이용한 방법.
-$(document).ready(function(){
-  // == $(function() {})
-  $('.board').click(function() {
-    location.href = "/boards/" + $(this).data('id');
-    // hover로 주었던 부분이 data- 로 바뀜
-  })
-})
+// $(document).ready(function(){
+//   // == $(function() {})
+//   $('.table').on('click', '.board', function()){
+//     location.href = "/boards/" + $(this).data('id');
+//     // hover로 주었던 부분이 data- 로 바뀜
+//   })
+// })

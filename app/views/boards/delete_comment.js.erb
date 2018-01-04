@@ -1,0 +1,5 @@
+alert("댓글 삭제~~~");
+
+// 내용물 안보이게 하는 방법 hide, fadeOut 두 가지 방법이 있음.
+// 완전히 삭제하려면 remove() 사용.
+$('#comment-<%= @comment.id %>').fadeOut().remove();

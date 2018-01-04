@@ -6,5 +6,29 @@
     <input type="password" name="password" class="form-control" placeholder="Password">
     <label for="inputPassword" class="sr-only">Password Confirmation</label>
     <input type="password" name="password_confirmation" class="form-control" placeholder="Password Confirmation">
-    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" disabled = "false">Sign in</button>
+<% end %>
+
+<% content_for :script do %>
+<script>
+  $(function(){
+    $('input[name=email]').on('change', function(){
+      var id = $(this).val();
+      $.ajax({
+        url: '/check_email',
+        method: 'POST',
+        data: {
+          email: id
+        }
+      })
+    })
+
+
+  })
+
+  function validation(){
+    
+  }
+
+</script>
 <% end %>

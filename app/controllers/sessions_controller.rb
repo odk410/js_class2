@@ -18,8 +18,14 @@ class SessionsController < ApplicationController
     end
   end
 
+  def check_email
+    @email = params[:email]
+    @tmp = User.find_by(email: params[:email]).nil?
+  end
+
   # 로그인 화면
   def signin
+
   end
 
   # 로그인 액션
@@ -41,4 +47,6 @@ class SessionsController < ApplicationController
     session.delete(:user_id)
     redirect_to '/', notice: "로그아웃 성공!"
   end
+
+
 end
